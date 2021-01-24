@@ -1,0 +1,47 @@
+
+//--------------------------------------------------------------------------------
+// Report descriptor data in hex (length 35 bytes)
+//--------------------------------------------------------------------------------
+
+
+// 050C0901 A1010600 FF0A07FD 15002501 95017501 81027507 95018103 75089503
+// 8103C0       
+
+
+//--------------------------------------------------------------------------------
+// Decoded Application Collection
+//--------------------------------------------------------------------------------
+
+/*
+05 0C        (GLOBAL) USAGE_PAGE         0x000C Consumer Device Page 
+09 01        (LOCAL)  USAGE              0x000C0001 Consumer Control (Application Collection)  
+A1 01        (MAIN)   COLLECTION         0x01 Application (Usage=0x000C0001: Page=Consumer Device Page, Usage=Consumer Control, Type=Application Collection)
+06 00FF        (GLOBAL) USAGE_PAGE         0xFF00 Vendor-defined 
+0A 07FD        (LOCAL)  USAGE              0xFF00FD07 <-- Warning: Undocumented usage (document it by inserting FD07 into file FF00.conf)
+15 00          (GLOBAL) LOGICAL_MINIMUM    0x00 (0)  <-- Info: Consider replacing 15 00 with 14
+25 01          (GLOBAL) LOGICAL_MAXIMUM    0x01 (1)  
+95 01          (GLOBAL) REPORT_COUNT       0x01 (1) Number of fields  
+75 01          (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field  
+81 02          (MAIN)   INPUT              0x00000002 (1 field x 1 bit) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+75 07          (GLOBAL) REPORT_SIZE        0x07 (7) Number of bits per field  
+95 01          (GLOBAL) REPORT_COUNT       0x01 (1) Number of fields <-- Redundant: REPORT_COUNT is already 1 
+81 03          (MAIN)   INPUT              0x00000003 (1 field x 7 bits) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+75 08          (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field  
+95 03          (GLOBAL) REPORT_COUNT       0x03 (3) Number of fields  
+81 03          (MAIN)   INPUT              0x00000003 (3 fields x 8 bits) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+C0           (MAIN)   END_COLLECTION     Application 
+*/
+
+//--------------------------------------------------------------------------------
+// Vendor-defined inputReport (Device --> Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+                                                     // No REPORT ID byte
+                                                     // Collection: CA:ConsumerControl
+  uint8_t  VEN_ConsumerControlFD07 : 1;              // Usage 0xFF00FD07: , Value = 0 to 1
+  uint8_t  : 7;                                      // Pad
+  uint8_t  pad_3[3];                                 // Pad
+} inputReport_t;
+

@@ -1,0 +1,223 @@
+
+//--------------------------------------------------------------------------------
+// Report descriptor data in hex (length 203 bytes)
+//--------------------------------------------------------------------------------
+
+
+// 05011500 0904A101 85300501 05091901 290A1500 25017501 950A5500 65008102
+// 0509190B 290E1500 25017501 95048102 75019502 81030B01 000100A1 000B3000
+// 01000B31 0001000B 32000100 0B350001 00150027 FFFF0000 75109504 8102C00B
+// 39000100 15002507 3500463B 01651475 04950181 02050919 0F291215 00250175
+// 01950481 02750895 34810306 00FF8521 09017508 953F8103 85810902 7508953F
+// 81038501 09037508 953F9183 85100904 7508953F 91838580 09057508 953F9183
+// 85820906 7508953F 9183C0     
+
+
+//--------------------------------------------------------------------------------
+// Decoded Application Collection
+//--------------------------------------------------------------------------------
+
+/*
+05 01        (GLOBAL) USAGE_PAGE         0x0001 Generic Desktop Page 
+15 00        (GLOBAL) LOGICAL_MINIMUM    0x00 (0)  <-- Info: Consider replacing 15 00 with 14
+09 04        (LOCAL)  USAGE              0x00010004 Joystick (Application Collection)  
+A1 01        (MAIN)   COLLECTION         0x01 Application (Usage=0x00010004: Page=Generic Desktop Page, Usage=Joystick, Type=Application Collection)
+85 30          (GLOBAL) REPORT_ID          0x30 (48) '0'  
+05 01          (GLOBAL) USAGE_PAGE         0x0001 Generic Desktop Page <-- Redundant: USAGE_PAGE is already 0x0001
+05 09          (GLOBAL) USAGE_PAGE         0x0009 Button Page 
+19 01          (LOCAL)  USAGE_MINIMUM      0x00090001 Button 1 Primary/trigger (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+29 0A          (LOCAL)  USAGE_MAXIMUM      0x0009000A Button 10 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+15 00          (GLOBAL) LOGICAL_MINIMUM    0x00 (0) <-- Redundant: LOGICAL_MINIMUM is already 0 <-- Info: Consider replacing 15 00 with 14
+25 01          (GLOBAL) LOGICAL_MAXIMUM    0x01 (1)  
+75 01          (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field  
+95 0A          (GLOBAL) REPORT_COUNT       0x0A (10) Number of fields  
+55 00          (GLOBAL) UNIT_EXPONENT      0x00 (Unit Value x 10⁰) <-- Redundant: UNIT_EXPONENT is already 0 <-- Info: Consider replacing 55 00 with 54
+65 00          (GLOBAL) UNIT               0x00 No unit (0=None) <-- Redundant: UNIT is already 0x00000000 <-- Info: Consider replacing 65 00 with 64
+81 02          (MAIN)   INPUT              0x00000002 (10 fields x 1 bit) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+05 09          (GLOBAL) USAGE_PAGE         0x0009 Button Page <-- Redundant: USAGE_PAGE is already 0x0009
+19 0B          (LOCAL)  USAGE_MINIMUM      0x0009000B Button 11 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+29 0E          (LOCAL)  USAGE_MAXIMUM      0x0009000E Button 14 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+15 00          (GLOBAL) LOGICAL_MINIMUM    0x00 (0) <-- Redundant: LOGICAL_MINIMUM is already 0 <-- Info: Consider replacing 15 00 with 14
+25 01          (GLOBAL) LOGICAL_MAXIMUM    0x01 (1) <-- Redundant: LOGICAL_MAXIMUM is already 1 
+75 01          (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field <-- Redundant: REPORT_SIZE is already 1 
+95 04          (GLOBAL) REPORT_COUNT       0x04 (4) Number of fields  
+81 02          (MAIN)   INPUT              0x00000002 (4 fields x 1 bit) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+75 01          (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field <-- Redundant: REPORT_SIZE is already 1 
+95 02          (GLOBAL) REPORT_COUNT       0x02 (2) Number of fields  
+81 03          (MAIN)   INPUT              0x00000003 (2 fields x 1 bit) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+0B 01000100    (LOCAL)  USAGE              0x00010001 Generic Desktop Page: Pointer (CP=Physical Collection) 
+A1 00          (MAIN)   COLLECTION         0x00 Physical (Usage=0x00010001: Page=Generic Desktop Page, Usage=Pointer, Type=Physical Collection)
+0B 30000100      (LOCAL)  USAGE              0x00010030 Generic Desktop Page: X (DV=Dynamic Value) 
+0B 31000100      (LOCAL)  USAGE              0x00010031 Generic Desktop Page: Y (DV=Dynamic Value) 
+0B 32000100      (LOCAL)  USAGE              0x00010032 Generic Desktop Page: Z (DV=Dynamic Value) 
+0B 35000100      (LOCAL)  USAGE              0x00010035 Generic Desktop Page: Rz (DV=Dynamic Value) 
+15 00            (GLOBAL) LOGICAL_MINIMUM    0x00 (0) <-- Redundant: LOGICAL_MINIMUM is already 0 <-- Info: Consider replacing 15 00 with 14
+27 FFFF0000      (GLOBAL) LOGICAL_MAXIMUM    0x0000FFFF (65535)  
+75 10            (GLOBAL) REPORT_SIZE        0x10 (16) Number of bits per field  
+95 04            (GLOBAL) REPORT_COUNT       0x04 (4) Number of fields  
+81 02            (MAIN)   INPUT              0x00000002 (4 fields x 16 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+C0             (MAIN)   END_COLLECTION     Physical 
+0B 39000100    (LOCAL)  USAGE              0x00010039 Generic Desktop Page: Hat switch (DV=Dynamic Value) 
+15 00          (GLOBAL) LOGICAL_MINIMUM    0x00 (0) <-- Redundant: LOGICAL_MINIMUM is already 0 <-- Info: Consider replacing 15 00 with 14
+25 07          (GLOBAL) LOGICAL_MAXIMUM    0x07 (7)  
+35 00          (GLOBAL) PHYSICAL_MINIMUM   0x00 (0)  <-- Info: Consider replacing 35 00 with 34
+46 3B01        (GLOBAL) PHYSICAL_MAXIMUM   0x013B (315)  
+65 14          (GLOBAL) UNIT               0x14 Rotation in degrees [1° units] (4=System=English Rotation, 1=Rotation=Degrees)  
+75 04          (GLOBAL) REPORT_SIZE        0x04 (4) Number of bits per field  
+95 01          (GLOBAL) REPORT_COUNT       0x01 (1) Number of fields  
+81 02          (MAIN)   INPUT              0x00000002 (1 field x 4 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+05 09          (GLOBAL) USAGE_PAGE         0x0009 Button Page <-- Redundant: USAGE_PAGE is already 0x0009
+19 0F          (LOCAL)  USAGE_MINIMUM      0x0009000F Button 15 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+29 12          (LOCAL)  USAGE_MAXIMUM      0x00090012 Button 18 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+15 00          (GLOBAL) LOGICAL_MINIMUM    0x00 (0) <-- Redundant: LOGICAL_MINIMUM is already 0 <-- Info: Consider replacing 15 00 with 14
+25 01          (GLOBAL) LOGICAL_MAXIMUM    0x01 (1)  
+75 01          (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field  
+95 04          (GLOBAL) REPORT_COUNT       0x04 (4) Number of fields  
+81 02          (MAIN)   INPUT              0x00000002 (4 fields x 1 bit) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+75 08          (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field  
+95 34          (GLOBAL) REPORT_COUNT       0x34 (52) Number of fields  
+81 03          (MAIN)   INPUT              0x00000003 (52 fields x 8 bits) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+06 00FF        (GLOBAL) USAGE_PAGE         0xFF00 Vendor-defined 
+85 21          (GLOBAL) REPORT_ID          0x21 (33)  
+09 01          (LOCAL)  USAGE              0xFF000001 <-- Warning: Undocumented usage (document it by inserting 0001 into file FF00.conf)
+75 08          (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 3F          (GLOBAL) REPORT_COUNT       0x3F (63) Number of fields  
+81 03          (MAIN)   INPUT              0x00000003 (63 fields x 8 bits) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+85 81          (GLOBAL) REPORT_ID          0x81 (129)  
+09 02          (LOCAL)  USAGE              0xFF000002 <-- Warning: Undocumented usage (document it by inserting 0002 into file FF00.conf)
+75 08          (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 3F          (GLOBAL) REPORT_COUNT       0x3F (63) Number of fields <-- Redundant: REPORT_COUNT is already 63 
+81 03          (MAIN)   INPUT              0x00000003 (63 fields x 8 bits) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+85 01          (GLOBAL) REPORT_ID          0x01 (1)  
+09 03          (LOCAL)  USAGE              0xFF000003 <-- Warning: Undocumented usage (document it by inserting 0003 into file FF00.conf)
+75 08          (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 3F          (GLOBAL) REPORT_COUNT       0x3F (63) Number of fields <-- Redundant: REPORT_COUNT is already 63 
+91 83          (MAIN)   OUTPUT             0x00000083 (63 fields x 8 bits) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 1=Volatile 0=Bitmap 
+85 10          (GLOBAL) REPORT_ID          0x10 (16)  
+09 04          (LOCAL)  USAGE              0xFF000004 <-- Warning: Undocumented usage (document it by inserting 0004 into file FF00.conf)
+75 08          (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 3F          (GLOBAL) REPORT_COUNT       0x3F (63) Number of fields <-- Redundant: REPORT_COUNT is already 63 
+91 83          (MAIN)   OUTPUT             0x00000083 (63 fields x 8 bits) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 1=Volatile 0=Bitmap 
+85 80          (GLOBAL) REPORT_ID          0x80 (128)  
+09 05          (LOCAL)  USAGE              0xFF000005 <-- Warning: Undocumented usage (document it by inserting 0005 into file FF00.conf)
+75 08          (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 3F          (GLOBAL) REPORT_COUNT       0x3F (63) Number of fields <-- Redundant: REPORT_COUNT is already 63 
+91 83          (MAIN)   OUTPUT             0x00000083 (63 fields x 8 bits) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 1=Volatile 0=Bitmap 
+85 82          (GLOBAL) REPORT_ID          0x82 (130)  
+09 06          (LOCAL)  USAGE              0xFF000006 <-- Warning: Undocumented usage (document it by inserting 0006 into file FF00.conf)
+75 08          (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 3F          (GLOBAL) REPORT_COUNT       0x3F (63) Number of fields <-- Redundant: REPORT_COUNT is already 63 
+91 83          (MAIN)   OUTPUT             0x00000083 (63 fields x 8 bits) 1=Constant 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 1=Volatile 0=Bitmap 
+C0           (MAIN)   END_COLLECTION     Application  <-- Warning: Physical units are still in effect PHYSICAL(MIN=0,MAX=315) UNIT(0x00000014,EXP=0)
+*/
+
+//--------------------------------------------------------------------------------
+// Button Page inputReport 30 (Device --> Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x30 (48) '0'
+                                                     // Collection: CA:Joystick
+  uint8_t  BTN_JoystickButton1 : 1;                  // Usage 0x00090001: Button 1 Primary/trigger, Value = 0 to 1
+  uint8_t  BTN_JoystickButton2 : 1;                  // Usage 0x00090002: Button 2 Secondary, Value = 0 to 1
+  uint8_t  BTN_JoystickButton3 : 1;                  // Usage 0x00090003: Button 3 Tertiary, Value = 0 to 1
+  uint8_t  BTN_JoystickButton4 : 1;                  // Usage 0x00090004: Button 4, Value = 0 to 1
+  uint8_t  BTN_JoystickButton5 : 1;                  // Usage 0x00090005: Button 5, Value = 0 to 1
+  uint8_t  BTN_JoystickButton6 : 1;                  // Usage 0x00090006: Button 6, Value = 0 to 1
+  uint8_t  BTN_JoystickButton7 : 1;                  // Usage 0x00090007: Button 7, Value = 0 to 1
+  uint8_t  BTN_JoystickButton8 : 1;                  // Usage 0x00090008: Button 8, Value = 0 to 1
+  uint8_t  BTN_JoystickButton9 : 1;                  // Usage 0x00090009: Button 9, Value = 0 to 1
+  uint8_t  BTN_JoystickButton10 : 1;                 // Usage 0x0009000A: Button 10, Value = 0 to 1
+  uint8_t  BTN_JoystickButton11 : 1;                 // Usage 0x0009000B: Button 11, Value = 0 to 1
+  uint8_t  BTN_JoystickButton12 : 1;                 // Usage 0x0009000C: Button 12, Value = 0 to 1
+  uint8_t  BTN_JoystickButton13 : 1;                 // Usage 0x0009000D: Button 13, Value = 0 to 1
+  uint8_t  BTN_JoystickButton14 : 1;                 // Usage 0x0009000E: Button 14, Value = 0 to 1
+  uint8_t  : 1;                                      // Pad
+  uint8_t  : 1;                                      // Pad
+                                                     // Collection: CA:Joystick CP:Pointer
+  uint16_t GD_JoystickPointerX;                      // Usage 0x00010030: X, Value = 0 to 65535
+  uint16_t GD_JoystickPointerY;                      // Usage 0x00010031: Y, Value = 0 to 65535
+  uint16_t GD_JoystickPointerZ;                      // Usage 0x00010032: Z, Value = 0 to 65535
+  uint16_t GD_JoystickPointerRz;                     // Usage 0x00010035: Rz, Value = 0 to 65535
+                                                     // Collection: CA:Joystick
+  uint8_t  GD_JoystickHatSwitch : 4;                 // Usage 0x00010039: Hat switch, Value = 0 to 7, Physical = Value x 45 in degrees
+  uint8_t  BTN_JoystickButton15 : 1;                 // Usage 0x0009000F: Button 15, Value = 0 to 1, Physical = Value x 315 in degrees
+  uint8_t  BTN_JoystickButton16 : 1;                 // Usage 0x00090010: Button 16, Value = 0 to 1, Physical = Value x 315 in degrees
+  uint8_t  BTN_JoystickButton17 : 1;                 // Usage 0x00090011: Button 17, Value = 0 to 1, Physical = Value x 315 in degrees
+  uint8_t  BTN_JoystickButton18 : 1;                 // Usage 0x00090012: Button 18, Value = 0 to 1, Physical = Value x 315 in degrees
+  uint8_t  pad_7[52];                                // Pad
+} inputReport30_t;
+
+
+//--------------------------------------------------------------------------------
+// Vendor-defined inputReport 21 (Device --> Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x21 (33)
+                                                     // Collection: CA:Joystick
+  uint8_t  VEN_Joystick0001[63];                     // Usage 0xFF000001: , Value = 0 to 1, Physical = Value x 315 in degrees
+} inputReport21_t;
+
+
+//--------------------------------------------------------------------------------
+// Vendor-defined inputReport 81 (Device --> Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x81 (129)
+                                                     // Collection: CA:Joystick
+  uint8_t  VEN_Joystick0002[63];                     // Usage 0xFF000002: , Value = 0 to 1, Physical = Value x 315 in degrees
+} inputReport81_t;
+
+
+//--------------------------------------------------------------------------------
+// Vendor-defined outputReport 01 (Device <-- Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x01 (1)
+                                                     // Collection: CA:Joystick
+  uint8_t  VEN_Joystick0003[63];                     // Usage 0xFF000003: , Value = 0 to 1, Physical = Value x 315 in degrees
+} outputReport01_t;
+
+
+//--------------------------------------------------------------------------------
+// Vendor-defined outputReport 10 (Device <-- Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x10 (16)
+                                                     // Collection: CA:Joystick
+  uint8_t  VEN_Joystick0004[63];                     // Usage 0xFF000004: , Value = 0 to 1, Physical = Value x 315 in degrees
+} outputReport10_t;
+
+
+//--------------------------------------------------------------------------------
+// Vendor-defined outputReport 80 (Device <-- Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x80 (128)
+                                                     // Collection: CA:Joystick
+  uint8_t  VEN_Joystick0005[63];                     // Usage 0xFF000005: , Value = 0 to 1, Physical = Value x 315 in degrees
+} outputReport80_t;
+
+
+//--------------------------------------------------------------------------------
+// Vendor-defined outputReport 82 (Device <-- Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x82 (130)
+                                                     // Collection: CA:Joystick
+  uint8_t  VEN_Joystick0006[63];                     // Usage 0xFF000006: , Value = 0 to 1, Physical = Value x 315 in degrees
+} outputReport82_t;
+

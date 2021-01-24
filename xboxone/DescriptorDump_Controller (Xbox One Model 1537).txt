@@ -1,0 +1,179 @@
+Information for device Controller (VID=0x045E PID=0x02D1):
+
+Connection Information:
+------------------------------
+Device current bus speed: FullSpeed
+Device supports USB 1.1 specification
+Device supports USB 2.0 specification
+Device address: 0x0017
+Current configuration value: 0x01
+Number of open pipes: 2
+
+Device Descriptor:
+------------------------------
+0x12	bLength
+0x01	bDescriptorType
+0x0200	bcdUSB
+0xFF	bDeviceClass      (Vendor specific)
+0x47	bDeviceSubClass   
+0xD0	bDeviceProtocol   
+0x40	bMaxPacketSize0   (64 bytes)
+0x045E	idVendor
+0x02D1	idProduct
+0x0203	bcdDevice
+0x01	iManufacturer   "Microsoft"
+0x02	iProduct        "Controller"
+0x03	iSerialNumber   "7EED86C35B04"
+0x01	bNumConfigurations
+
+Configuration Descriptor:
+------------------------------
+0x09	bLength
+0x02	bDescriptorType
+0x0060	wTotalLength   (96 bytes)
+0x03	bNumInterfaces
+0x01	bConfigurationValue
+0x00	iConfiguration
+0xA0	bmAttributes   (Bus-powered Device, Remote-Wakeup)
+0xFA	bMaxPower      (500 mA)
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x00	bInterfaceNumber
+0x00	bAlternateSetting
+0x02	bNumEndPoints
+0xFF	bInterfaceClass      (Vendor specific)
+0x47	bInterfaceSubClass   
+0xD0	bInterfaceProtocol   
+0x00	iInterface
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x01	bEndpointAddress  (OUT endpoint 1)
+0x03	bmAttributes      (Transfer: Interrupt / Synch: None / Usage: Data)
+0x0040	wMaxPacketSize    (1 x 64 bytes)
+0x04	bInterval         (4 frames)
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x81	bEndpointAddress  (IN endpoint 1)
+0x03	bmAttributes      (Transfer: Interrupt / Synch: None / Usage: Data)
+0x0040	wMaxPacketSize    (1 x 64 bytes)
+0x04	bInterval         (4 frames)
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x01	bInterfaceNumber
+0x00	bAlternateSetting
+0x00	bNumEndPoints
+0xFF	bInterfaceClass      (Vendor specific)
+0x47	bInterfaceSubClass   
+0xD0	bInterfaceProtocol   
+0x00	iInterface
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x01	bInterfaceNumber
+0x01	bAlternateSetting
+0x02	bNumEndPoints
+0xFF	bInterfaceClass      (Vendor specific)
+0x47	bInterfaceSubClass   
+0xD0	bInterfaceProtocol   
+0x00	iInterface
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x02	bEndpointAddress  (OUT endpoint 2)
+0x01	bmAttributes      (Transfer: Isochronous / Synch: None / Usage: Data)
+0x00E4	wMaxPacketSize    (1 x 228 bytes)
+0x01	bInterval         (1 frames)
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x82	bEndpointAddress  (IN endpoint 2)
+0x01	bmAttributes      (Transfer: Isochronous / Synch: None / Usage: Data)
+0x00E4	wMaxPacketSize    (1 x 228 bytes)
+0x01	bInterval         (1 frames)
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x02	bInterfaceNumber
+0x00	bAlternateSetting
+0x00	bNumEndPoints
+0xFF	bInterfaceClass      (Vendor specific)
+0x47	bInterfaceSubClass   
+0xD0	bInterfaceProtocol   
+0x00	iInterface
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x02	bInterfaceNumber
+0x01	bAlternateSetting
+0x02	bNumEndPoints
+0xFF	bInterfaceClass      (Vendor specific)
+0x47	bInterfaceSubClass   
+0xD0	bInterfaceProtocol   
+0x00	iInterface
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x03	bEndpointAddress  (OUT endpoint 3)
+0x02	bmAttributes      (Transfer: Bulk / Synch: None / Usage: Data)
+0x0040	wMaxPacketSize    (64 bytes)
+0x00	bInterval         
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x83	bEndpointAddress  (IN endpoint 3)
+0x02	bmAttributes      (Transfer: Bulk / Synch: None / Usage: Data)
+0x0040	wMaxPacketSize    (64 bytes)
+0x00	bInterval         
+
+Microsoft OS Descriptor:
+------------------------------
+0x12	bLength
+0x03	bDescriptorType
+Hex dump: 
+0x12 0x03 0x4D 0x00 0x53 0x00 0x46 0x00 0x54 0x00 
+0x31 0x00 0x30 0x00 0x30 0x00 0x90 0x00 
+
+String Descriptor Table
+--------------------------------
+Index  LANGID  String
+0x00   0x0000  0x0409 
+0x01   0x0409  "Microsoft"
+0x02   0x0409  "Controller"
+0x03   0x0409  "7EED86C35B04"
+
+------------------------------
+
+Connection path for device: 
+USB xHCI Compliant Host Controller
+Root Hub
+Controller (VID=0x045E PID=0x02D1) Port: 1
+
+Running on: Windows 10 or greater (Build Version 18363)
+
+Brought to you by TDD v2.15.0, Jun  8 2020, 17:18:07

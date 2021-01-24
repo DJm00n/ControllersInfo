@@ -1,0 +1,328 @@
+Information for device Wireless Controller (VID=0x054C PID=0x09CC):
+
+Connection Information:
+------------------------------
+Device current bus speed: FullSpeed
+Device supports USB 1.1 specification
+Device supports USB 2.0 specification
+Device address: 0x001F
+Current configuration value: 0x01
+Number of open pipes: 2
+
+Device Descriptor:
+------------------------------
+0x12	bLength
+0x01	bDescriptorType
+0x0200	bcdUSB
+0x00	bDeviceClass      
+0x00	bDeviceSubClass   
+0x00	bDeviceProtocol   
+0x40	bMaxPacketSize0   (64 bytes)
+0x054C	idVendor
+0x09CC	idProduct
+0x0100	bcdDevice
+0x01	iManufacturer   "Sony Interactive Entertainment"
+0x02	iProduct        "Wireless Controller"
+0x00	iSerialNumber
+0x01	bNumConfigurations
+
+Configuration Descriptor:
+------------------------------
+0x09	bLength
+0x02	bDescriptorType
+0x00E1	wTotalLength   (225 bytes)
+0x04	bNumInterfaces
+0x01	bConfigurationValue
+0x00	iConfiguration
+0xC0	bmAttributes   (Self-powered Device)
+0xFA	bMaxPower      (500 mA)
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x00	bInterfaceNumber
+0x00	bAlternateSetting
+0x00	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x01	bInterfaceSubClass   (Audio Control Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+AC Interface Header Descriptor:
+------------------------------
+0x0A	bLength
+0x24	bDescriptorType
+0x01	bDescriptorSubtype
+0x0100	bcdADC
+0x0047	wTotalLength   (71 bytes)
+0x02	bInCollection
+0x01	baInterfaceNr(1)
+0x02	baInterfaceNr(2)
+
+AC Input Terminal Descriptor:
+------------------------------
+0x0C	bLength
+0x24	bDescriptorType
+0x02	bDescriptorSubtype
+0x01	bTerminalID
+0x0101	wTerminalType   (USB Streaming)
+0x06	bAssocTerminal
+0x02	bNrChannels   (2 channels)
+0x0003	wChannelConfig
+0x00	iChannelNames
+0x00	iTerminal
+
+AC Feature Unit Descriptor:
+------------------------------
+0x0A	bLength
+0x24	bDescriptorType
+0x06	bDescriptorSubtype
+0x02	bUnitID
+0x01	bSourceID
+0x01	bControlSize
+bmaControls: 
+ 0x03	Channel(0) - Mute / Volume
+ 0x00	Channel(1)
+ 0x00	Channel(2)
+0x00	iFeature
+
+
+AC Output Terminal Descriptor:
+------------------------------
+0x09	bLength
+0x24	bDescriptorType
+0x03	bDescriptorSubtype
+0x03	bTerminalID
+0x0402	wTerminalType   (Headset)
+0x04	bAssocTerminal
+0x02	bSourceID
+0x00	iTerminal
+
+AC Input Terminal Descriptor:
+------------------------------
+0x0C	bLength
+0x24	bDescriptorType
+0x02	bDescriptorSubtype
+0x04	bTerminalID
+0x0402	wTerminalType   (Headset)
+0x03	bAssocTerminal
+0x01	bNrChannels   (1 channels)
+0x0000	wChannelConfig
+0x00	iChannelNames
+0x00	iTerminal
+
+AC Feature Unit Descriptor:
+------------------------------
+0x09	bLength
+0x24	bDescriptorType
+0x06	bDescriptorSubtype
+0x05	bUnitID
+0x04	bSourceID
+0x01	bControlSize
+bmaControls: 
+ 0x03	Channel(0) - Mute / Volume
+ 0x00	Channel(1)
+0x00	iFeature
+
+
+AC Output Terminal Descriptor:
+------------------------------
+0x09	bLength
+0x24	bDescriptorType
+0x03	bDescriptorSubtype
+0x06	bTerminalID
+0x0101	wTerminalType   (USB Streaming)
+0x01	bAssocTerminal
+0x05	bSourceID
+0x00	iTerminal
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x01	bInterfaceNumber
+0x00	bAlternateSetting
+0x00	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x02	bInterfaceSubClass   (Audio Streaming Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x01	bInterfaceNumber
+0x01	bAlternateSetting
+0x01	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x02	bInterfaceSubClass   (Audio Streaming Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+AS Interface Descriptor:
+------------------------------
+0x07	bLength
+0x24	bDescriptorType
+0x01	bDescriptorSubtype
+0x01	bTerminalLink
+0x01	bDelay
+0x0001	wFormatTag   (PCM)
+
+AS Format Type 1 Descriptor:
+------------------------------
+0x0B	bLength
+0x24	bDescriptorType
+0x02	bDescriptorSubtype
+0x01	bFormatType   (FORMAT_TYPE_1)
+0x02	bNrChannels   (2 channels)
+0x02	bSubframeSize
+0x10	bBitResolution   (16 bits per sample)
+0x01	bSamFreqType   (Discrete sampling frequencies)
+0x007D00 	tSamFreq(1)   (32000 Hz)
+
+Endpoint Descriptor (Audio/MIDI 1.0):
+------------------------------
+0x09	bLength
+0x05	bDescriptorType
+0x01	bEndpointAddress  (OUT endpoint 1)
+0x09	bmAttributes      (Transfer: Isochronous / Synch: Adaptive / Usage: Data)
+0x0084	wMaxPacketSize    (1 x 132 bytes)
+0x01	bInterval         (1 frames)
+0x00	bRefresh
+0x00	bSynchAddress
+
+AS Isochronous Data Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x25	bDescriptorType
+0x01	bDescriptorSubtype
+0x00	bmAttributes
+0x00	bLockDelayUnits   (undefined)
+0x0000	wLockDelay
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x02	bInterfaceNumber
+0x00	bAlternateSetting
+0x00	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x02	bInterfaceSubClass   (Audio Streaming Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x02	bInterfaceNumber
+0x01	bAlternateSetting
+0x01	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x02	bInterfaceSubClass   (Audio Streaming Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+AS Interface Descriptor:
+------------------------------
+0x07	bLength
+0x24	bDescriptorType
+0x01	bDescriptorSubtype
+0x06	bTerminalLink
+0x01	bDelay
+0x0001	wFormatTag   (PCM)
+
+AS Format Type 1 Descriptor:
+------------------------------
+0x0B	bLength
+0x24	bDescriptorType
+0x02	bDescriptorSubtype
+0x01	bFormatType   (FORMAT_TYPE_1)
+0x01	bNrChannels   (1 channels)
+0x02	bSubframeSize
+0x10	bBitResolution   (16 bits per sample)
+0x01	bSamFreqType   (Discrete sampling frequencies)
+0x003E80 	tSamFreq(1)   (16000 Hz)
+
+Endpoint Descriptor (Audio/MIDI 1.0):
+------------------------------
+0x09	bLength
+0x05	bDescriptorType
+0x82	bEndpointAddress  (IN endpoint 2)
+0x05	bmAttributes      (Transfer: Isochronous / Synch: Asynchronous / Usage: Data)
+0x0022	wMaxPacketSize    (1 x 34 bytes)
+0x01	bInterval         (1 frames)
+0x00	bRefresh
+0x00	bSynchAddress
+
+AS Isochronous Data Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x25	bDescriptorType
+0x01	bDescriptorSubtype
+0x00	bmAttributes
+0x00	bLockDelayUnits   (undefined)
+0x0000	wLockDelay
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x03	bInterfaceNumber
+0x00	bAlternateSetting
+0x02	bNumEndPoints
+0x03	bInterfaceClass      (Human Interface Device Class)
+0x00	bInterfaceSubClass   
+0x00	bInterfaceProtocol   
+0x00	iInterface
+
+HID Descriptor:
+------------------------------
+0x09	bLength
+0x21	bDescriptorType
+0x0111	bcdHID
+0x00	bCountryCode
+0x01	bNumDescriptors
+0x22	bDescriptorType   (Report descriptor)
+0x01FB	bDescriptorLength
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x84	bEndpointAddress  (IN endpoint 4)
+0x03	bmAttributes      (Transfer: Interrupt / Synch: None / Usage: Data)
+0x0040	wMaxPacketSize    (1 x 64 bytes)
+0x05	bInterval         (5 frames)
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x03	bEndpointAddress  (OUT endpoint 3)
+0x03	bmAttributes      (Transfer: Interrupt / Synch: None / Usage: Data)
+0x0040	wMaxPacketSize    (1 x 64 bytes)
+0x05	bInterval         (5 frames)
+
+Microsoft OS Descriptor is not available. Error code: 0x0000001F
+
+String Descriptor Table
+--------------------------------
+Index  LANGID  String
+0x00   0x0000  0x0409 
+0x01   0x0409  "Sony Interactive Entertainment"
+0x02   0x0409  "Wireless Controller"
+
+------------------------------
+
+Connection path for device: 
+USB xHCI Compliant Host Controller
+Root Hub
+Wireless Controller (VID=0x054C PID=0x09CC) Port: 1
+
+Running on: Windows 10 or greater (Build Version 18363)
+
+Brought to you by TDD v2.15.0, Jun  8 2020, 17:18:07
