@@ -3,7 +3,7 @@
 This repo contains info on various game controlles.
 USB dumps were made via [Wireshark](https://www.wireshark.org/).
 
-HID descriptors were decoded via [RDD! HID Report Descriptor Decoder](https://github.com/abend0c1/hidrddfix lin) tool:
+HID descriptors were decoded via [RDD! HID Report Descriptor Decoder](https://github.com/abend0c1/hidrdd) tool:
 ```
 rexx rd.rex -d -b -x -f "hid_report_descriptor.bin" -o "hid_report_descriptor.txt"
 ```
