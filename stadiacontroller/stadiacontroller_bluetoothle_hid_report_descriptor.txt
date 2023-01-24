@@ -1,0 +1,173 @@
+
+//--------------------------------------------------------------------------------
+// Report descriptor data in hex (length 182 bytes)
+//--------------------------------------------------------------------------------
+
+
+// 05010905 A1018503 05017504 95012507 463B0165 14093981 42450065 00750195
+// 04810105 09150025 01750195 0F091209 11091409 13090D09 0C090B09 0F090E09
+// 08090709 05090409 02090181 02750195 01810105 01150126 FF000901 A1000930
+// 09317508 95028102 C00901A1 00093209 35750895 028102C0 05027508 95021500
+// 26FF0009 C509C481 02050C15 00250109 E909EA75 01950281 0209CD95 01810295
+// 05810185 05060F00 09977510 950227FF FF000091 02C0  
+
+
+//--------------------------------------------------------------------------------
+// Decoded Application Collection
+//--------------------------------------------------------------------------------
+
+/*
+05 01        (GLOBAL) USAGE_PAGE         0x0001 Generic Desktop Page 
+09 05        (LOCAL)  USAGE              0x00010005 Game Pad (Application Collection)  
+A1 01        (MAIN)   COLLECTION         0x01 Application (Usage=0x00010005: Page=Generic Desktop Page, Usage=Game Pad, Type=Application Collection)
+85 03          (GLOBAL) REPORT_ID          0x03 (3)  
+05 01          (GLOBAL) USAGE_PAGE         0x0001 Generic Desktop Page <-- Redundant: USAGE_PAGE is already 0x0001
+75 04          (GLOBAL) REPORT_SIZE        0x04 (4) Number of bits per field  
+95 01          (GLOBAL) REPORT_COUNT       0x01 (1) Number of fields  
+25 07          (GLOBAL) LOGICAL_MAXIMUM    0x07 (7)  
+46 3B01        (GLOBAL) PHYSICAL_MAXIMUM   0x013B (315)  
+65 14          (GLOBAL) UNIT               0x14 Rotation in degrees [1° units] (4=System=English Rotation, 1=Rotation=Degrees)  
+09 39          (LOCAL)  USAGE              0x00010039 Hat switch (Dynamic Value)  
+81 42          (MAIN)   INPUT              0x00000042 (1 field x 4 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 1=Null 0=NonVolatile 0=Bitmap  <-- Error: LOGICAL_MINIMUM is undefined <-- Error: PHYSICAL_MINIMUM is undefined
+45 00          (GLOBAL) PHYSICAL_MAXIMUM   0x00 (0)  <-- Info: Consider replacing 45 00 with 44
+65 00          (GLOBAL) UNIT               0x00 No unit (0=None)  <-- Info: Consider replacing 65 00 with 64
+75 01          (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field  
+95 04          (GLOBAL) REPORT_COUNT       0x04 (4) Number of fields  
+81 01          (MAIN)   INPUT              0x00000001 (4 fields x 1 bit) 1=Constant 0=Array 0=Absolute 
+05 09          (GLOBAL) USAGE_PAGE         0x0009 Button Page 
+15 00          (GLOBAL) LOGICAL_MINIMUM    0x00 (0)  <-- Info: Consider replacing 15 00 with 14
+25 01          (GLOBAL) LOGICAL_MAXIMUM    0x01 (1)  
+75 01          (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field <-- Redundant: REPORT_SIZE is already 1 
+95 0F          (GLOBAL) REPORT_COUNT       0x0F (15) Number of fields  
+09 12          (LOCAL)  USAGE              0x00090012 Button 18 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 11          (LOCAL)  USAGE              0x00090011 Button 17 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 14          (LOCAL)  USAGE              0x00090014 Button 20 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 13          (LOCAL)  USAGE              0x00090013 Button 19 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 0D          (LOCAL)  USAGE              0x0009000D Button 13 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 0C          (LOCAL)  USAGE              0x0009000C Button 12 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 0B          (LOCAL)  USAGE              0x0009000B Button 11 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 0F          (LOCAL)  USAGE              0x0009000F Button 15 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 0E          (LOCAL)  USAGE              0x0009000E Button 14 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 08          (LOCAL)  USAGE              0x00090008 Button 8 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 07          (LOCAL)  USAGE              0x00090007 Button 7 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 05          (LOCAL)  USAGE              0x00090005 Button 5 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 04          (LOCAL)  USAGE              0x00090004 Button 4 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 02          (LOCAL)  USAGE              0x00090002 Button 2 Secondary (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+09 01          (LOCAL)  USAGE              0x00090001 Button 1 Primary/trigger (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+81 02          (MAIN)   INPUT              0x00000002 (15 fields x 1 bit) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap  <-- Error: PHYSICAL_MINIMUM is undefined
+75 01          (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field <-- Redundant: REPORT_SIZE is already 1 
+95 01          (GLOBAL) REPORT_COUNT       0x01 (1) Number of fields  
+81 01          (MAIN)   INPUT              0x00000001 (1 field x 1 bit) 1=Constant 0=Array 0=Absolute 
+05 01          (GLOBAL) USAGE_PAGE         0x0001 Generic Desktop Page 
+15 01          (GLOBAL) LOGICAL_MINIMUM    0x01 (1)  
+26 FF00        (GLOBAL) LOGICAL_MAXIMUM    0x00FF (255)  
+09 01          (LOCAL)  USAGE              0x00010001 Pointer (Physical Collection)  
+A1 00          (MAIN)   COLLECTION         0x00 Physical (Usage=0x00010001: Page=Generic Desktop Page, Usage=Pointer, Type=Physical Collection)
+09 30            (LOCAL)  USAGE              0x00010030 X (Dynamic Value)  
+09 31            (LOCAL)  USAGE              0x00010031 Y (Dynamic Value)  
+75 08            (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field  
+95 02            (GLOBAL) REPORT_COUNT       0x02 (2) Number of fields  
+81 02            (MAIN)   INPUT              0x00000002 (2 fields x 8 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap  <-- Error: PHYSICAL_MINIMUM is undefined
+C0             (MAIN)   END_COLLECTION     Physical 
+09 01          (LOCAL)  USAGE              0x00010001 Pointer (Physical Collection)  
+A1 00          (MAIN)   COLLECTION         0x00 Physical (Usage=0x00010001: Page=Generic Desktop Page, Usage=Pointer, Type=Physical Collection)
+09 32            (LOCAL)  USAGE              0x00010032 Z (Dynamic Value)  
+09 35            (LOCAL)  USAGE              0x00010035 Rz (Dynamic Value)  
+75 08            (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 02            (GLOBAL) REPORT_COUNT       0x02 (2) Number of fields <-- Redundant: REPORT_COUNT is already 2 
+81 02            (MAIN)   INPUT              0x00000002 (2 fields x 8 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap  <-- Error: PHYSICAL_MINIMUM is undefined
+C0             (MAIN)   END_COLLECTION     Physical 
+05 02          (GLOBAL) USAGE_PAGE         0x0002 Simulation Controls Page 
+75 08          (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 02          (GLOBAL) REPORT_COUNT       0x02 (2) Number of fields <-- Redundant: REPORT_COUNT is already 2 
+15 00          (GLOBAL) LOGICAL_MINIMUM    0x00 (0)  <-- Info: Consider replacing 15 00 with 14
+26 FF00        (GLOBAL) LOGICAL_MAXIMUM    0x00FF (255) <-- Redundant: LOGICAL_MAXIMUM is already 255 
+09 C5          (LOCAL)  USAGE              0x000200C5 Brake (Dynamic Value)  
+09 C4          (LOCAL)  USAGE              0x000200C4 Accelerator (Dynamic Value)  
+81 02          (MAIN)   INPUT              0x00000002 (2 fields x 8 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap  <-- Error: PHYSICAL_MINIMUM is undefined
+05 0C          (GLOBAL) USAGE_PAGE         0x000C Consumer Device Page 
+15 00          (GLOBAL) LOGICAL_MINIMUM    0x00 (0) <-- Redundant: LOGICAL_MINIMUM is already 0 <-- Info: Consider replacing 15 00 with 14
+25 01          (GLOBAL) LOGICAL_MAXIMUM    0x01 (1)  
+09 E9          (LOCAL)  USAGE              0x000C00E9 Volume Increment (Re-trigger Control)  
+09 EA          (LOCAL)  USAGE              0x000C00EA Volume Decrement (Re-trigger Control)  
+75 01          (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field  
+95 02          (GLOBAL) REPORT_COUNT       0x02 (2) Number of fields <-- Redundant: REPORT_COUNT is already 2 
+81 02          (MAIN)   INPUT              0x00000002 (2 fields x 1 bit) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap  <-- Error: PHYSICAL_MINIMUM is undefined
+09 CD          (LOCAL)  USAGE              0x000C00CD Play/Pause (One Shot Control)  
+95 01          (GLOBAL) REPORT_COUNT       0x01 (1) Number of fields  
+81 02          (MAIN)   INPUT              0x00000002 (1 field x 1 bit) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap  <-- Error: PHYSICAL_MINIMUM is undefined
+95 05          (GLOBAL) REPORT_COUNT       0x05 (5) Number of fields  
+81 01          (MAIN)   INPUT              0x00000001 (5 fields x 1 bit) 1=Constant 0=Array 0=Absolute 
+85 05          (GLOBAL) REPORT_ID          0x05 (5)  
+06 0F00        (GLOBAL) USAGE_PAGE         0x000F Physical Interface Device Page 
+09 97          (LOCAL)  USAGE              0x000F0097 DC Enable Actuators (Selector)  
+75 10          (GLOBAL) REPORT_SIZE        0x10 (16) Number of bits per field  
+95 02          (GLOBAL) REPORT_COUNT       0x02 (2) Number of fields  
+27 FFFF0000    (GLOBAL) LOGICAL_MAXIMUM    0x0000FFFF (65535)  
+91 02          (MAIN)   OUTPUT             0x00000002 (2 fields x 16 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap  <-- Error: PHYSICAL_MINIMUM is undefined
+C0           (MAIN)   END_COLLECTION     Application 
+*/
+
+// All structure fields should be byte-aligned...
+#pragma pack(push,1)
+
+//--------------------------------------------------------------------------------
+// Generic Desktop Page inputReport 03 (Device --> Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x03 (3)
+                                                     // Collection: CA:GamePad
+  int8_t   GD_GamePadHatSwitch : 4;                  // Usage 0x00010039: Hat switch, Value =  to 7, Physical = Value x 45 in degrees
+  int8_t   : 1;                                      // Pad
+  int8_t   : 1;                                      // Pad
+  int8_t   : 1;                                      // Pad
+  int8_t   : 1;                                      // Pad
+  uint8_t  BTN_GamePadButton18 : 1;                  // Usage 0x00090012: Button 18, Value = 0 to 1
+  uint8_t  BTN_GamePadButton17 : 1;                  // Usage 0x00090011: Button 17, Value = 0 to 1
+  uint8_t  BTN_GamePadButton20 : 1;                  // Usage 0x00090014: Button 20, Value = 0 to 1
+  uint8_t  BTN_GamePadButton19 : 1;                  // Usage 0x00090013: Button 19, Value = 0 to 1
+  uint8_t  BTN_GamePadButton13 : 1;                  // Usage 0x0009000D: Button 13, Value = 0 to 1
+  uint8_t  BTN_GamePadButton12 : 1;                  // Usage 0x0009000C: Button 12, Value = 0 to 1
+  uint8_t  BTN_GamePadButton11 : 1;                  // Usage 0x0009000B: Button 11, Value = 0 to 1
+  uint8_t  BTN_GamePadButton15 : 1;                  // Usage 0x0009000F: Button 15, Value = 0 to 1
+  uint8_t  BTN_GamePadButton14 : 1;                  // Usage 0x0009000E: Button 14, Value = 0 to 1
+  uint8_t  BTN_GamePadButton8 : 1;                   // Usage 0x00090008: Button 8, Value = 0 to 1
+  uint8_t  BTN_GamePadButton7 : 1;                   // Usage 0x00090007: Button 7, Value = 0 to 1
+  uint8_t  BTN_GamePadButton5 : 1;                   // Usage 0x00090005: Button 5, Value = 0 to 1
+  uint8_t  BTN_GamePadButton4 : 1;                   // Usage 0x00090004: Button 4, Value = 0 to 1
+  uint8_t  BTN_GamePadButton2 : 1;                   // Usage 0x00090002: Button 2 Secondary, Value = 0 to 1
+  uint8_t  BTN_GamePadButton1 : 1;                   // Usage 0x00090001: Button 1 Primary/trigger, Value = 0 to 1
+  uint8_t  : 1;                                      // Pad
+                                                     // Collection: CA:GamePad CP:Pointer
+  uint8_t  GD_GamePadPointerX;                       // Usage 0x00010030: X, Value = 1 to 255
+  uint8_t  GD_GamePadPointerY;                       // Usage 0x00010031: Y, Value = 1 to 255
+  uint8_t  GD_GamePadPointerZ;                       // Usage 0x00010032: Z, Value = 1 to 255
+  uint8_t  GD_GamePadPointerRz;                      // Usage 0x00010035: Rz, Value = 1 to 255
+                                                     // Collection: CA:GamePad
+  uint8_t  SIM_GamePadBrake;                         // Usage 0x000200C5: Brake, Value = 0 to 255
+  uint8_t  SIM_GamePadAccelerator;                   // Usage 0x000200C4: Accelerator, Value = 0 to 255
+  uint8_t  CD_GamePadVolumeIncrement : 1;            // Usage 0x000C00E9: Volume Increment, Value = 0 to 1
+  uint8_t  CD_GamePadVolumeDecrement : 1;            // Usage 0x000C00EA: Volume Decrement, Value = 0 to 1
+  uint8_t  CD_GamePadPlayPause : 1;                  // Usage 0x000C00CD: Play/Pause, Value = 0 to 1
+  uint8_t  : 1;                                      // Pad
+  uint8_t  : 1;                                      // Pad
+  uint8_t  : 1;                                      // Pad
+  uint8_t  : 1;                                      // Pad
+  uint8_t  : 1;                                      // Pad
+} inputReport03_t;
+
+
+//--------------------------------------------------------------------------------
+// Physical Interface Device Page outputReport 05 (Device <-- Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x05 (5)
+                                                     // Collection: CA:GamePad
+  uint16_t PID_GamePadDcEnableActuators[2];          // Usage 0x000F0097: DC Enable Actuators, Value = 0 to 65535
+} outputReport05_t;
+
+#pragma pack(pop)
