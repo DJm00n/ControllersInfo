@@ -1,0 +1,452 @@
+Information for device Amazon Game Controller (VID=0x1949 PID=0x0419):
+
+------------------------------
+Connection Information:
+------------------------------
+Device current bus speed: HighSpeed
+Device supports USB 1.1 specification
+Device supports USB 2.0 specification
+Device address: 0x0006
+Current configuration value: 0x01
+Number of open pipes: 6
+
+
+------------------------------
+Device Descriptor:
+------------------------------
+0x12	bLength
+0x01	bDescriptorType
+0x0200	bcdUSB
+0xEF	bDeviceClass      (Miscellaneous device)
+0x02	bDeviceSubClass   
+0x01	bDeviceProtocol   
+0x40	bMaxPacketSize0   (64 bytes)
+0x1949	idVendor
+0x0419	idProduct
+0x0101	bcdDevice
+0x01	iManufacturer   "Amazon"
+0x02	iProduct        "Amazon Game Controller"
+0x03	iSerialNumber   "G0G159090273003V"
+0x01	bNumConfigurations
+
+Device Qualifier Descriptor is not available. Error code: 0x0000001F
+
+
+-------------------------
+Configuration Descriptor:
+-------------------------
+0x09	bLength
+0x02	bDescriptorType
+0x0134	wTotalLength   (308 bytes)
+0x06	bNumInterfaces
+0x01	bConfigurationValue
+0x00	iConfiguration
+0xC0	bmAttributes   (Self-powered Device)
+0x32	bMaxPower      (100 mA)
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x00	bInterfaceNumber
+0x00	bAlternateSetting
+0x02	bNumEndPoints
+0x03	bInterfaceClass      (Human Interface Device Class)
+0x00	bInterfaceSubClass   
+0x00	bInterfaceProtocol   
+0x02	iInterface   "Amazon Game Controller"
+
+HID Descriptor:
+------------------------------
+0x09	bLength
+0x21	bDescriptorType
+0x0111	bcdHID
+0x00	bCountryCode
+0x01	bNumDescriptors
+0x22	bDescriptorType   (Report descriptor)
+0x005D	bDescriptorLength
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x81	bEndpointAddress  (IN endpoint 1)
+0x03	bmAttributes      (Transfer: Interrupt / Synch: None / Usage: Data)
+0x0020	wMaxPacketSize    (1 x 32 bytes)
+0x05	bInterval         (16 microframes)
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x01	bEndpointAddress  (OUT endpoint 1)
+0x03	bmAttributes      (Transfer: Interrupt / Synch: None / Usage: Data)
+0x0020	wMaxPacketSize    (1 x 32 bytes)
+0x05	bInterval         (16 microframes)
+
+Interface Association Descriptor:
+------------------------------
+0x08	bLength
+0x0B	bDescriptorType
+0x01	bFirstInterface
+0x03	bInterfaceCount
+0x01	bFunctionClass      (Audio Device Class)
+0x01	bFunctionSubClass   (Audio Control Interface)
+0x00	bFunctionProtocol   (Audio Protocol undefined)
+0x02	iFunction   "Amazon Game Controller"
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x01	bInterfaceNumber
+0x00	bAlternateSetting
+0x01	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x01	bInterfaceSubClass   (Audio Control Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+AC Interface Header Descriptor:
+------------------------------
+0x0A	bLength
+0x24	bDescriptorType
+0x01	bDescriptorSubtype
+0x0100	bcdADC
+0x0047	wTotalLength   (71 bytes)
+0x02	bInCollection
+0x02	baInterfaceNr(1)
+0x03	baInterfaceNr(2)
+
+AC Input Terminal Descriptor:
+------------------------------
+0x0C	bLength
+0x24	bDescriptorType
+0x02	bDescriptorSubtype
+0x01	bTerminalID
+0x0201	wTerminalType   (Microphone)
+0x00	bAssocTerminal
+0x01	bNrChannels   (1 channels)
+0x0000	wChannelConfig
+0x00	iChannelNames
+0x00	iTerminal
+
+AC Feature Unit Descriptor:
+------------------------------
+0x09	bLength
+0x24	bDescriptorType
+0x06	bDescriptorSubtype
+0x02	bUnitID
+0x01	bSourceID
+0x01	bControlSize
+bmaControls: 
+ 0x03	Channel(0) - Mute / Volume
+ 0x00	Channel(1)
+0x00	iFeature
+
+
+AC Output Terminal Descriptor:
+------------------------------
+0x09	bLength
+0x24	bDescriptorType
+0x03	bDescriptorSubtype
+0x03	bTerminalID
+0x0101	wTerminalType   (USB Streaming)
+0x00	bAssocTerminal
+0x02	bSourceID
+0x00	iTerminal
+
+AC Input Terminal Descriptor:
+------------------------------
+0x0C	bLength
+0x24	bDescriptorType
+0x02	bDescriptorSubtype
+0x04	bTerminalID
+0x0101	wTerminalType   (USB Streaming)
+0x00	bAssocTerminal
+0x02	bNrChannels   (2 channels)
+0x0003	wChannelConfig
+0x00	iChannelNames
+0x00	iTerminal
+
+AC Feature Unit Descriptor:
+------------------------------
+0x0A	bLength
+0x24	bDescriptorType
+0x06	bDescriptorSubtype
+0x05	bUnitID
+0x04	bSourceID
+0x01	bControlSize
+bmaControls: 
+ 0x03	Channel(0) - Mute / Volume
+ 0x00	Channel(1)
+ 0x00	Channel(2)
+0x00	iFeature
+
+
+AC Output Terminal Descriptor:
+------------------------------
+0x09	bLength
+0x24	bDescriptorType
+0x03	bDescriptorSubtype
+0x06	bTerminalID
+0x0301	wTerminalType   (Speaker)
+0x00	bAssocTerminal
+0x05	bSourceID
+0x00	iTerminal
+
+Endpoint Descriptor (Audio/MIDI 1.0):
+------------------------------
+0x09	bLength
+0x05	bDescriptorType
+0x82	bEndpointAddress  (IN endpoint 2)
+0x03	bmAttributes      (Transfer: Interrupt / Synch: None / Usage: Data)
+0x0008	wMaxPacketSize    (1 x 8 bytes)
+0x08	bInterval         (128 microframes)
+0x00	bRefresh
+0x00	bSynchAddress
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x02	bInterfaceNumber
+0x00	bAlternateSetting
+0x00	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x02	bInterfaceSubClass   (Audio Streaming Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x02	bInterfaceNumber
+0x01	bAlternateSetting
+0x01	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x02	bInterfaceSubClass   (Audio Streaming Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+AS Interface Descriptor:
+------------------------------
+0x07	bLength
+0x24	bDescriptorType
+0x01	bDescriptorSubtype
+0x03	bTerminalLink
+0x00	bDelay
+0x0001	wFormatTag   (PCM)
+
+AS Format Type 1 Descriptor:
+------------------------------
+0x0B	bLength
+0x24	bDescriptorType
+0x02	bDescriptorSubtype
+0x01	bFormatType   (FORMAT_TYPE_1)
+0x02	bNrChannels   (2 channels)
+0x02	bSubframeSize
+0x10	bBitResolution   (16 bits per sample)
+0x01	bSamFreqType   (Discrete sampling frequencies)
+0x00BB80 	tSamFreq(1)   (48000 Hz)
+
+Endpoint Descriptor (Audio/MIDI 1.0):
+------------------------------
+0x09	bLength
+0x05	bDescriptorType
+0x83	bEndpointAddress  (IN endpoint 3)
+0x01	bmAttributes      (Transfer: Isochronous / Synch: None / Usage: Data)
+0x00C0	wMaxPacketSize    (1 x 192 bytes)
+0x04	bInterval         (8 microframes)
+0x00	bRefresh
+0x00	bSynchAddress
+
+AS Isochronous Data Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x25	bDescriptorType
+0x01	bDescriptorSubtype
+0x00	bmAttributes
+0x00	bLockDelayUnits   (undefined)
+0x0000	wLockDelay
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x03	bInterfaceNumber
+0x00	bAlternateSetting
+0x00	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x02	bInterfaceSubClass   (Audio Streaming Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x03	bInterfaceNumber
+0x01	bAlternateSetting
+0x01	bNumEndPoints
+0x01	bInterfaceClass      (Audio Device Class)
+0x02	bInterfaceSubClass   (Audio Streaming Interface)
+0x00	bInterfaceProtocol   (Audio Protocol undefined)
+0x00	iInterface
+
+AS Interface Descriptor:
+------------------------------
+0x07	bLength
+0x24	bDescriptorType
+0x01	bDescriptorSubtype
+0x04	bTerminalLink
+0x01	bDelay
+0x0001	wFormatTag   (PCM)
+
+AS Format Type 1 Descriptor:
+------------------------------
+0x0B	bLength
+0x24	bDescriptorType
+0x02	bDescriptorSubtype
+0x01	bFormatType   (FORMAT_TYPE_1)
+0x02	bNrChannels   (2 channels)
+0x02	bSubframeSize
+0x10	bBitResolution   (16 bits per sample)
+0x01	bSamFreqType   (Discrete sampling frequencies)
+0x00BB80 	tSamFreq(1)   (48000 Hz)
+
+Endpoint Descriptor (Audio/MIDI 1.0):
+------------------------------
+0x09	bLength
+0x05	bDescriptorType
+0x02	bEndpointAddress  (OUT endpoint 2)
+0x0D	bmAttributes      (Transfer: Isochronous / Synch: Synchronous / Usage: Data)
+0x00C0	wMaxPacketSize    (1 x 192 bytes)
+0x04	bInterval         (8 microframes)
+0x00	bRefresh
+0x00	bSynchAddress
+
+AS Isochronous Data Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x25	bDescriptorType
+0x01	bDescriptorSubtype
+0x00	bmAttributes
+0x00	bLockDelayUnits   (undefined)
+0x0000	wLockDelay
+
+Interface Association Descriptor:
+------------------------------
+0x08	bLength
+0x0B	bDescriptorType
+0x04	bFirstInterface
+0x02	bInterfaceCount
+0x02	bFunctionClass      (Communication Device Class)
+0x02	bFunctionSubClass   (Abstract Control Model - ACM)
+0x00	bFunctionProtocol   
+0x02	iFunction   "Amazon Game Controller"
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x04	bInterfaceNumber
+0x00	bAlternateSetting
+0x01	bNumEndPoints
+0x02	bInterfaceClass      (Communication Device Class)
+0x02	bInterfaceSubClass   (Abstract Control Model - ACM)
+0x00	bInterfaceProtocol   
+0x00	iInterface
+
+CDC Header Functional Descriptor:
+------------------------------
+0x05	bFunctionalLength
+0x24	bDescriptorType
+0x00	bDescriptorSubtype
+0x0110	bcdCDC
+
+CDC Call Management Functional Descriptor:
+------------------------------
+0x05	bFunctionalLength
+0x24	bDescriptorType
+0x01	bDescriptorSubtype
+0x01	bmCapabilities
+0x01	bDataInterface
+
+CDC Abstract Control Management Functional Descriptor:
+------------------------------
+0x04	bFunctionalLength
+0x24	bDescriptorType
+0x02	bDescriptorSubtype
+0x06	bmCapabilities
+
+CDC Union Functional Descriptor:
+------------------------------
+0x05	bFunctionalLength
+0x24	bDescriptorType
+0x06	bDescriptorSubtype
+0x04	bControlInterface
+0x05	bSubordinateInterface(0)
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x84	bEndpointAddress  (IN endpoint 4)
+0x03	bmAttributes      (Transfer: Interrupt / Synch: None / Usage: Data)
+0x0010	wMaxPacketSize    (1 x 16 bytes)
+0x07	bInterval         (64 microframes)
+
+Interface Descriptor:
+------------------------------
+0x09	bLength
+0x04	bDescriptorType
+0x05	bInterfaceNumber
+0x00	bAlternateSetting
+0x02	bNumEndPoints
+0x0A	bInterfaceClass      (CDC Data)
+0x00	bInterfaceSubClass   
+0x00	bInterfaceProtocol   
+0x00	iInterface
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x85	bEndpointAddress  (IN endpoint 5)
+0x02	bmAttributes      (Transfer: Bulk / Synch: None / Usage: Data)
+0x0200	wMaxPacketSize    (512 bytes)
+0x00	bInterval         
+
+Endpoint Descriptor:
+------------------------------
+0x07	bLength
+0x05	bDescriptorType
+0x03	bEndpointAddress  (OUT endpoint 3)
+0x02	bmAttributes      (Transfer: Bulk / Synch: None / Usage: Data)
+0x0200	wMaxPacketSize    (512 bytes)
+0x00	bInterval         
+
+Microsoft OS Descriptor is not available. Error code: 0x0000001F
+
+
+--------------------------------
+String Descriptor Table
+--------------------------------
+Index  LANGID  String
+0x00   0x0000  0x0409 
+0x01   0x0409  "Amazon"
+0x02   0x0409  "Amazon Game Controller"
+0x03   0x0409  "G0G159090273003V"
+
+------------------------------
+
+Connection path for device: 
+USB xHCI Compliant Host Controller
+Root Hub
+Amazon Game Controller (VID=0x1949 PID=0x0419) Port: 12
+
+Running on: Windows 10 or greater (Build Version 19044)
+
+Brought to you by TDD v2.17.0, Feb 23 2021, 14:04:02

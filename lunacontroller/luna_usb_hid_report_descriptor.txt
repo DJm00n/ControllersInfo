@@ -1,0 +1,101 @@
+
+//--------------------------------------------------------------------------------
+// Report descriptor data in hex (length 93 bytes)
+//--------------------------------------------------------------------------------
+
+
+// 05010905 A101A100 85010509 1901290C 15002501 7501950C 81027501 95048101
+// 05010939 15002507 3500463B 01651475 08950181 42650009 30093109 32093515
+// 0026FF00 75089504 81020501 09330934 150026FF 00750895 028102C0 C0
+
+
+//--------------------------------------------------------------------------------
+// Decoded Application Collection
+//--------------------------------------------------------------------------------
+
+/*
+05 01        (GLOBAL) USAGE_PAGE         0x0001 Generic Desktop Page 
+09 05        (LOCAL)  USAGE              0x00010005 Game Pad (Application Collection)  
+A1 01        (MAIN)   COLLECTION         0x01 Application (Usage=0x00010005: Page=Generic Desktop Page, Usage=Game Pad, Type=Application Collection)
+A1 00          (MAIN)   COLLECTION         0x00 Physical (Usage=0x0: Page=, Usage=, Type=) <-- Error: COLLECTION must be preceded by a known USAGE <-- Warning: USAGE type should be CP (Physical Collection)
+85 01            (GLOBAL) REPORT_ID          0x01 (1)  
+05 09            (GLOBAL) USAGE_PAGE         0x0009 Button Page 
+19 01            (LOCAL)  USAGE_MINIMUM      0x00090001 Button 1 Primary/trigger (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+29 0C            (LOCAL)  USAGE_MAXIMUM      0x0009000C Button 12 (Selector, On/Off Control, Momentary Control, or One Shot Control)  
+15 00            (GLOBAL) LOGICAL_MINIMUM    0x00 (0)  <-- Info: Consider replacing 15 00 with 14
+25 01            (GLOBAL) LOGICAL_MAXIMUM    0x01 (1)  
+75 01            (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field  
+95 0C            (GLOBAL) REPORT_COUNT       0x0C (12) Number of fields  
+81 02            (MAIN)   INPUT              0x00000002 (12 fields x 1 bit) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+75 01            (GLOBAL) REPORT_SIZE        0x01 (1) Number of bits per field <-- Redundant: REPORT_SIZE is already 1 
+95 04            (GLOBAL) REPORT_COUNT       0x04 (4) Number of fields  
+81 01            (MAIN)   INPUT              0x00000001 (4 fields x 1 bit) 1=Constant 0=Array 0=Absolute 
+05 01            (GLOBAL) USAGE_PAGE         0x0001 Generic Desktop Page 
+09 39            (LOCAL)  USAGE              0x00010039 Hat switch (Dynamic Value)  
+15 00            (GLOBAL) LOGICAL_MINIMUM    0x00 (0) <-- Redundant: LOGICAL_MINIMUM is already 0 <-- Info: Consider replacing 15 00 with 14
+25 07            (GLOBAL) LOGICAL_MAXIMUM    0x07 (7)  
+35 00            (GLOBAL) PHYSICAL_MINIMUM   0x00 (0)  <-- Info: Consider replacing 35 00 with 34
+46 3B01          (GLOBAL) PHYSICAL_MAXIMUM   0x013B (315)  
+65 14            (GLOBAL) UNIT               0x14 Rotation in degrees [1° units] (4=System=English Rotation, 1=Rotation=Degrees)  
+75 08            (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field  
+95 01            (GLOBAL) REPORT_COUNT       0x01 (1) Number of fields  
+81 42            (MAIN)   INPUT              0x00000042 (1 field x 8 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 1=Null 0=NonVolatile 0=Bitmap 
+65 00            (GLOBAL) UNIT               0x00 No unit (0=None)  <-- Info: Consider replacing 65 00 with 64
+09 30            (LOCAL)  USAGE              0x00010030 X (Dynamic Value)  
+09 31            (LOCAL)  USAGE              0x00010031 Y (Dynamic Value)  
+09 32            (LOCAL)  USAGE              0x00010032 Z (Dynamic Value)  
+09 35            (LOCAL)  USAGE              0x00010035 Rz (Dynamic Value)  
+15 00            (GLOBAL) LOGICAL_MINIMUM    0x00 (0) <-- Redundant: LOGICAL_MINIMUM is already 0 <-- Info: Consider replacing 15 00 with 14
+26 FF00          (GLOBAL) LOGICAL_MAXIMUM    0x00FF (255)  
+75 08            (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 04            (GLOBAL) REPORT_COUNT       0x04 (4) Number of fields  
+81 02            (MAIN)   INPUT              0x00000002 (4 fields x 8 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+05 01            (GLOBAL) USAGE_PAGE         0x0001 Generic Desktop Page <-- Redundant: USAGE_PAGE is already 0x0001
+09 33            (LOCAL)  USAGE              0x00010033 Rx (Dynamic Value)  
+09 34            (LOCAL)  USAGE              0x00010034 Ry (Dynamic Value)  
+15 00            (GLOBAL) LOGICAL_MINIMUM    0x00 (0) <-- Redundant: LOGICAL_MINIMUM is already 0 <-- Info: Consider replacing 15 00 with 14
+26 FF00          (GLOBAL) LOGICAL_MAXIMUM    0x00FF (255) <-- Redundant: LOGICAL_MAXIMUM is already 255 
+75 08            (GLOBAL) REPORT_SIZE        0x08 (8) Number of bits per field <-- Redundant: REPORT_SIZE is already 8 
+95 02            (GLOBAL) REPORT_COUNT       0x02 (2) Number of fields  
+81 02            (MAIN)   INPUT              0x00000002 (2 fields x 8 bits) 0=Data 1=Variable 0=Absolute 0=NoWrap 0=Linear 0=PrefState 0=NoNull 0=NonVolatile 0=Bitmap 
+C0             (MAIN)   END_COLLECTION     Physical  <-- Warning: Physical units are still in effect PHYSICAL(MIN=0,MAX=315) UNIT(0x00000000,EXP=0)
+C0           (MAIN)   END_COLLECTION     Application  <-- Warning: Physical units are still in effect PHYSICAL(MIN=0,MAX=315) UNIT(0x00000000,EXP=0)
+*/
+
+// All structure fields should be byte-aligned...
+#pragma pack(push,1)
+
+//--------------------------------------------------------------------------------
+// Button Page inputReport 01 (Device --> Host)
+//--------------------------------------------------------------------------------
+
+typedef struct
+{
+  uint8_t  reportId;                                 // Report ID = 0x01 (1)
+                                                     // Collection: CA:GamePad CP:
+  uint8_t  BTN_GamePadButton1 : 1;                   // Usage 0x00090001: Button 1 Primary/trigger, Value = 0 to 1
+  uint8_t  BTN_GamePadButton2 : 1;                   // Usage 0x00090002: Button 2 Secondary, Value = 0 to 1
+  uint8_t  BTN_GamePadButton3 : 1;                   // Usage 0x00090003: Button 3 Tertiary, Value = 0 to 1
+  uint8_t  BTN_GamePadButton4 : 1;                   // Usage 0x00090004: Button 4, Value = 0 to 1
+  uint8_t  BTN_GamePadButton5 : 1;                   // Usage 0x00090005: Button 5, Value = 0 to 1
+  uint8_t  BTN_GamePadButton6 : 1;                   // Usage 0x00090006: Button 6, Value = 0 to 1
+  uint8_t  BTN_GamePadButton7 : 1;                   // Usage 0x00090007: Button 7, Value = 0 to 1
+  uint8_t  BTN_GamePadButton8 : 1;                   // Usage 0x00090008: Button 8, Value = 0 to 1
+  uint8_t  BTN_GamePadButton9 : 1;                   // Usage 0x00090009: Button 9, Value = 0 to 1
+  uint8_t  BTN_GamePadButton10 : 1;                  // Usage 0x0009000A: Button 10, Value = 0 to 1
+  uint8_t  BTN_GamePadButton11 : 1;                  // Usage 0x0009000B: Button 11, Value = 0 to 1
+  uint8_t  BTN_GamePadButton12 : 1;                  // Usage 0x0009000C: Button 12, Value = 0 to 1
+  uint8_t  : 1;                                      // Pad
+  uint8_t  : 1;                                      // Pad
+  uint8_t  : 1;                                      // Pad
+  uint8_t  : 1;                                      // Pad
+  uint8_t  GD_GamePadHatSwitch;                      // Usage 0x00010039: Hat switch, Value = 0 to 7, Physical = Value x 45 in degrees
+  uint8_t  GD_GamePadX;                              // Usage 0x00010030: X, Value = 0 to 255, Physical = Value x 21 / 17
+  uint8_t  GD_GamePadY;                              // Usage 0x00010031: Y, Value = 0 to 255, Physical = Value x 21 / 17
+  uint8_t  GD_GamePadZ;                              // Usage 0x00010032: Z, Value = 0 to 255, Physical = Value x 21 / 17
+  uint8_t  GD_GamePadRz;                             // Usage 0x00010035: Rz, Value = 0 to 255, Physical = Value x 21 / 17
+  uint8_t  GD_GamePadRx;                             // Usage 0x00010033: Rx, Value = 0 to 255, Physical = Value x 21 / 17
+  uint8_t  GD_GamePadRy;                             // Usage 0x00010034: Ry, Value = 0 to 255, Physical = Value x 21 / 17
+} inputReport01_t;
+
+#pragma pack(pop)
