@@ -43,7 +43,17 @@ Compatible IDs:             USB\Class_03&SubClass_00&Prot_00
                             USB\Class_03
 ```
 
+# Xbox Series
+
 When connecting dongle to Xbox One you can see error `0x82d60002` (Unauthorized acessory error). But works so far:
 
 ![image](https://github.com/DJm00n/ControllersInfo/assets/1285934/3426b432-11a4-4469-a671-2f588c532f47)
 ![image](https://github.com/DJm00n/ControllersInfo/assets/1285934/4317c1e1-6844-432b-99ad-aa89e54f9e21)
+
+# Playstation 5
+
+Detected and working as unknown PS4 controller when dongle is connected to PS5. Did not test it with PS4.
+
+# SDL
+
+Detected as third-party PS4 controller by [SDL library](https://github.com/libsdl-org/SDL) (HIDAPI_DriverPS4 backend). Vibration is working. Gyroscope/accelerometer is not working. 
